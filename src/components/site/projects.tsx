@@ -151,8 +151,12 @@ export function Projects() {
         </Reveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.slice(0, 6).map((p, i) => (
-            <Reveal key={p.name} delay={i * 0.08}>
+          {projects.map((p, i) => (
+            <Reveal
+              key={p.name}
+              delay={i * 0.08}
+              className={i === 6 ? "lg:col-start-2" : undefined}
+            >
               <article className="group rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <div className="relative">
                   <ProjectCarousel images={p.images} alt={p.name} />
@@ -178,35 +182,6 @@ export function Projects() {
               </article>
             </Reveal>
           ))}
-          <div className="col-span-full flex flex-col md:flex-row justify-center gap-8">
-            {projects.slice(6).map((p, i) => (
-              <Reveal key={p.name} delay={(i + 6) * 0.08}>
-                <article className="group flex-1 rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-                  <div className="relative">
-                    <ProjectCarousel images={p.images} alt={p.name} />
-                    <span className="absolute top-4 left-4 z-10 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-xs font-medium text-brand-green">{p.badge}</span>
-                    <span className="absolute top-4 right-4 z-10 rounded-full bg-brand-orange px-3 py-1 text-xs font-medium text-white">{p.status}</span>
-                  </div>
-                  <div className="p-7">
-                    <h3 className="font-serif text-2xl text-foreground">{p.name}</h3>
-                    <div className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
-                      <MapPin className="h-3.5 w-3.5" /> {p.location}
-                    </div>
-                    <ul className="mt-5 space-y-2">
-                      {p.highlights.map((h) => (
-                        <li key={h} className="flex items-center gap-2 text-sm text-foreground/85">
-                          <CheckCircle2 className="h-4 w-4 text-brand-green" /> {h}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link to="/contact" className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-brand-green hover:text-brand-orange transition-colors">
-                      Enquire about this project <ArrowUpRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </div>
     </section>
