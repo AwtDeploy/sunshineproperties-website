@@ -181,7 +181,7 @@ export function Projects() {
           <div className="col-span-full flex flex-col md:flex-row justify-center gap-8">
             {projects.slice(6).map((p, i) => (
               <Reveal key={p.name} delay={(i + 6) * 0.08}>
-                <article className="group rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.333rem)]">
+                <article className="group flex-1 rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                   <div className="relative">
                     <ProjectCarousel images={p.images} alt={p.name} />
                     <span className="absolute top-4 left-4 z-10 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-xs font-medium text-brand-green">{p.badge}</span>
