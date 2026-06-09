@@ -74,7 +74,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sunshine Marketing & Promoters — Premium DTCP Plots Near Bangalore" },
+      { title: "Sunshine Marketing & Promoters - Premium DTCP Plots Near Bangalore" },
       {
         name: "description",
         content:
@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "DTCP plots near Bangalore, ASV 135 GOLD, Narsapur plots, A-Katha plots, plotted developments Karnataka, real estate investment Bangalore",
       },
-      { property: "og:title", content: "Sunshine Marketing & Promoters — ASV 135 GOLD Premium Plots" },
+      { property: "og:title", content: "Sunshine Marketing & Promoters - ASV 135 GOLD Premium Plots" },
       {
         property: "og:description",
         content:
@@ -97,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Sunshine Marketing & Promoters" },
       {
         name: "twitter:description",
-        content: "Premium DTCP plots near Bangalore — invest in tomorrow's landmark destinations.",
+        content: "Premium DTCP plots near Bangalore - invest in tomorrow's landmark destinations.",
       },
       { name: "theme-color", content: "#6EA300" },
     ],

@@ -7,9 +7,9 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Sunshine Marketing & Promoters" },
+      { title: "Gallery - Sunshine Marketing & Promoters" },
       { name: "description", content: "Brochure-quality visuals of our plotted developments, project layouts and site progress." },
-      { property: "og:title", content: "Gallery — Sunshine Projects" },
+      { property: "og:title", content: "Gallery - Sunshine Projects" },
       { property: "og:description", content: "A visual tour of our premium plotted developments in Karnataka." },
       { property: "og:url", content: "/gallery" },
     ],
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/gallery")({
             A visual tour of our <span className="italic text-brand-orange">developments</span>.
           </h1>
           <p className="mt-5 text-white/80 max-w-2xl mx-auto">
-            Real layouts, real progress, real homes — captured at golden hour.
+            Real layouts, real progress, real homes - captured at golden hour.
           </p>
         </div>
       </section>

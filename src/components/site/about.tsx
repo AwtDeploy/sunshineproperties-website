@@ -6,7 +6,7 @@ import img from "@/assets/gallery-2.jpg";
 
 export function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-cream">
+    <section id="about" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal>
           <div className="relative">

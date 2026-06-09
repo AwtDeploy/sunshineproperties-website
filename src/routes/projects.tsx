@@ -8,9 +8,9 @@ import { CTA } from "@/components/site/cta";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — ASV 135 GOLD & More | Sunshine" },
+      { title: "Projects - ASV 135 GOLD & More | Sunshine" },
       { name: "description", content: "Explore our premium DTCP-approved plotted developments including ASV 135 GOLD near Narsapur Industrial Area." },
-      { property: "og:title", content: "Sunshine Projects — Premium DTCP Plots" },
+      { property: "og:title", content: "Sunshine Projects - Premium DTCP Plots" },
       { property: "og:description", content: "Premium plotted developments near Bangalore's fastest-growing industrial corridor." },
       { property: "og:url", content: "/projects" },
     ],

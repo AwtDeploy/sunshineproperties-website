@@ -21,13 +21,13 @@ import map from "@/assets/gallery-6.jpg";
 const pillars = [
   { icon: TrendingUp, t: "High Appreciation Potential", d: "Land in Bangalore's growth corridors has historically appreciated 18–25% annually." },
   { icon: Factory, t: "Industrial Demand Driver", d: "Honda, Mahindra, TATA, Scania and dozens of OEMs are creating sustained housing demand." },
-  { icon: Banknote, t: "Bank Loans Up To 70%", d: "Pre-approved with leading banks — quick documentation, smooth disbursal." },
+  { icon: Banknote, t: "Bank Loans Up To 70%", d: "Pre-approved with leading banks - quick documentation, smooth disbursal." },
   { icon: ShieldCheck, t: "Zero Legal Risk", d: "100% DTCP approved, A-Katha certified, with clean titles you can independently verify." },
 ];
 
 const drivers = [
   { icon: Factory, t: "Narsapur Industrial Area", d: "Home to multinational manufacturers driving employment and land value." },
-  { icon: Plane, t: "Kempegowda Intl. Airport", d: "Connected via NH-44 — under an hour to terminals via the upcoming PRR." },
+  { icon: Plane, t: "Kempegowda Intl. Airport", d: "Connected via NH-44 - under an hour to terminals via the upcoming PRR." },
   { icon: Train, t: "Suburban Rail & Metro", d: "Planned rail and metro extensions improving last-mile connectivity." },
   { icon: GraduationCap, t: "Top Educational Institutions", d: "Reputed schools, colleges and global universities within easy reach." },
   { icon: HeartPulse, t: "Healthcare Hubs", d: "Multi-specialty hospitals along Bellary Road and Devanahalli corridor." },
@@ -58,14 +58,14 @@ export function InvestmentAdvantage() {
             <span className="italic text-brand-orange"> investor's smartest move</span>.
           </h1>
           <p className="mt-5 text-white/80 max-w-2xl mx-auto">
-            Strategically located near Bangalore's most active industrial corridor — engineered
+            Strategically located near Bangalore's most active industrial corridor - engineered
             for transparency, liquidity and long-term wealth creation.
           </p>
         </div>
       </section>
 
       {/* Pillars */}
-      <section className="py-20 md:py-28 bg-cream">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal>
             <div className="max-w-2xl mb-14">
@@ -94,7 +94,7 @@ export function InvestmentAdvantage() {
       </section>
 
       {/* ROI Timeline */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
@@ -102,7 +102,7 @@ export function InvestmentAdvantage() {
                 Appreciation Trajectory
               </span>
               <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-foreground">
-                Land prices in the corridor — <span className="italic text-brand-green">last 6 years</span>.
+                Land prices in the corridor - <span className="italic text-brand-green">last 6 years</span>.
               </h2>
             </div>
           </Reveal>
@@ -125,7 +125,7 @@ export function InvestmentAdvantage() {
       </section>
 
       {/* Location drivers */}
-      <section className="py-20 md:py-28 bg-cream">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <Reveal>
             <img src={map} alt="Aerial connectivity view" className="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover" />
@@ -138,7 +138,7 @@ export function InvestmentAdvantage() {
               Surrounded by the engines of <span className="italic text-brand-green">Bangalore's growth</span>.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Every Sunshine project is positioned on confirmed infrastructure corridors —
+              Every Sunshine project is positioned on confirmed infrastructure corridors -
               not speculation. Real demand drivers within minutes of your doorstep.
             </p>
 
@@ -160,7 +160,7 @@ export function InvestmentAdvantage() {
       </section>
 
       {/* Investor profile */}
-      <section className="py-20 md:py-28 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1E1E1E] to-[#2a2a2a]" />
         <div className="relative mx-auto max-w-7xl px-4 md:px-6">
           <Reveal>

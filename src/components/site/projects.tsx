@@ -131,7 +131,7 @@ function ProjectCarousel({ images, alt }: { images: string[]; alt: string }) {
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 md:py-32">
+    <section id="projects" className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
@@ -150,10 +150,10 @@ export function Projects() {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.08}>
-              <article className="group rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+              <article className="group rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.25rem)]">
                 <div className="relative">
                   <ProjectCarousel images={p.images} alt={p.name} />
                   <span className="absolute top-4 left-4 z-10 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-xs font-medium text-brand-green">

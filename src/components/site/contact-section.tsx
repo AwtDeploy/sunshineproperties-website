@@ -49,14 +49,14 @@ export function ContactSection() {
       await postEnquiry(values);
       setSent(true);
       reset();
-      toast.success("Thank you — we'll be in touch within one working day.");
+      toast.success("Thank you - we'll be in touch within one working day.");
     } catch {
       toast.error("Something went wrong. Please try again or call us directly.");
     }
   });
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-cream">
+    <section id="contact" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16">
         <Reveal>
           <span className="text-xs tracking-[0.22em] uppercase text-brand-orange font-medium">
@@ -219,7 +219,7 @@ export function ContactSection() {
                     Sending…
                   </>
                 ) : sent ? (
-                  "Thank you — we'll be in touch"
+                  "Thank you - we'll be in touch"
                 ) : (
                   <>
                     <Send className="mr-2 h-4 w-4" /> Send Enquiry

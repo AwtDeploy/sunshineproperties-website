@@ -40,10 +40,10 @@ export function AsvFeatures() {
   return (
     <>
       {/* Amenities */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal>
-            <h2 className="text-center font-serif text-3xl md:text-5xl text-foreground">
+            <h2 className="text-center font-serif text-3xl md:text-5xl text-foreground font-bold">
               Project <span className="text-brand-orange">Amenities</span>
             </h2>
           </Reveal>
@@ -51,8 +51,8 @@ export function AsvFeatures() {
             {amenities.map((a, i) => (
               <Reveal key={a.t} delay={i * 0.05}>
                 <div className="group h-full rounded-2xl bg-[#F7F7F7] hover:bg-white border border-transparent hover:border-border hover:shadow-xl transition-all p-6 md:p-8 text-center">
-                  <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors">
-                    <a.icon className="h-8 w-8" />
+                  <span className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                    <a.icon className="h-10 w-10" />
                   </span>
                   <div className="mt-5 font-serif text-base md:text-lg text-foreground leading-snug">
                     {a.t}
@@ -65,10 +65,10 @@ export function AsvFeatures() {
       </section>
 
       {/* Location Advantage */}
-      <section className="py-20 md:py-28 bg-[#F7F7F7]">
+      <section className="py-16 md:py-24 bg-[#F7F7F7]">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal>
-            <h2 className="text-center font-serif text-3xl md:text-5xl text-foreground">
+            <h2 className="text-center font-serif text-3xl md:text-5xl text-foreground font-bold">
               Location <span className="text-brand-orange">Advantage</span>
             </h2>
           </Reveal>
@@ -76,11 +76,11 @@ export function AsvFeatures() {
             {location.map((l, i) => (
               <Reveal key={l.t} delay={i * 0.07}>
                 <div className="h-full rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all p-7 text-center">
-                  <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
-                    <l.icon className="h-8 w-8" />
+                  <span className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green">
+                    <l.icon className="h-10 w-10" />
                   </span>
                   <div className="mt-5 font-serif text-lg text-foreground leading-snug">
-                    {l.t} {l.v && <span className="text-brand-orange">— {l.v}</span>}
+                    {l.t} {l.v && <span className="text-brand-orange">- {l.v}</span>}
                   </div>
                 </div>
               </Reveal>
@@ -90,12 +90,12 @@ export function AsvFeatures() {
       </section>
 
       {/* Pricing / Why Invest / Bank Loan */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 md:px-6 grid md:grid-cols-3 gap-6">
           <Reveal>
             <div className="h-full rounded-3xl p-8 md:p-10 text-white shadow-xl" style={{ background: "linear-gradient(135deg,#0F3A5F,#1E5F8C)" }}>
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#0F3A5F]">
-                <ThumbsUp className="h-5 w-5" />
+              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white text-[#0F3A5F]">
+                <ThumbsUp className="h-7 w-7" />
               </span>
               <h3 className="mt-6 font-serif text-2xl">Pricing &amp; Investment Value</h3>
               <div className="mt-2 font-semibold">Price: ₹2,999/- Per Sqft</div>
@@ -110,8 +110,8 @@ export function AsvFeatures() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="h-full rounded-3xl p-8 md:p-10 bg-[#F2F2F2] shadow-sm">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-foreground text-white">
-                <Rocket className="h-5 w-5" />
+              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-foreground text-white">
+                <Rocket className="h-7 w-7" />
               </span>
               <h3 className="mt-6 font-serif text-2xl text-foreground">Why Invest</h3>
               <ul className="mt-5 space-y-2.5 text-foreground/80 text-sm">
@@ -125,8 +125,8 @@ export function AsvFeatures() {
           </Reveal>
           <Reveal delay={0.2}>
             <div className="h-full rounded-3xl p-8 md:p-10 text-white shadow-xl" style={{ background: "linear-gradient(135deg,#6EA300,#588300)" }}>
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-brand-green">
-                <Home className="h-5 w-5" />
+              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white text-brand-green">
+                <Home className="h-7 w-7" />
               </span>
               <h3 className="mt-6 font-serif text-2xl">Bank Loan Support</h3>
               <ul className="mt-5 space-y-2.5 text-white/95 text-sm">

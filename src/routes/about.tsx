@@ -8,7 +8,7 @@ import { CTA } from "@/components/site/cta";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Sunshine Marketing & Promoters" },
+      { title: "About - Sunshine Marketing & Promoters" },
       { name: "description", content: "Trusted real estate developers delivering transparent, high-growth plotted developments in Karnataka." },
       { property: "og:title", content: "About Sunshine Marketing & Promoters" },
       { property: "og:description", content: "Trusted real estate developers delivering transparent, high-growth plotted developments in Karnataka." },
