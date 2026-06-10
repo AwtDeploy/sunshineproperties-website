@@ -155,7 +155,7 @@ export function Projects() {
             <Reveal
               key={p.name}
               delay={i * 0.08}
-              className={i === 6 ? "md:col-span-2 lg:col-span-2" : i === 7 ? "md:col-span-2 lg:col-span-2 lg:col-start-2" : undefined}
+              className={i === 6 ? "lg:col-start-2" : undefined}
             >
               <article className="group rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <div className="relative">
