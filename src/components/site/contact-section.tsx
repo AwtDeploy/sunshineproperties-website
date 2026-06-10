@@ -57,73 +57,76 @@ export function ContactSection() {
   });
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-cream">
-      <div className="mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16">
-        <Reveal>
-          <div className="relative rounded-2xl overflow-hidden p-8 md:p-10">
-            <img src={bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
-            <div className="relative">
-              <span className="text-xs tracking-[0.22em] uppercase text-brand-orange font-medium">
-                Get In Touch
-              </span>
-              <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-white">
-                Speak to our <span className="italic text-brand-green">investment advisor</span> today.
-              </h2>
-              <p className="mt-5 text-white/80 leading-relaxed max-w-md">
-                Share your details and our team will reach out within one working day to schedule a
-                personalized site visit.
-              </p>
+    <section id="contact">
+      <div className="relative py-20 md:py-28 overflow-hidden">
+        <img src={bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
+        <div className="relative mx-auto max-w-7xl px-4 md:px-6">
+          <Reveal>
+            <span className="text-xs tracking-[0.22em] uppercase text-brand-orange font-medium">
+              Get In Touch
+            </span>
+            <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-white max-w-2xl">
+              Speak to our <span className="italic text-brand-green">investment advisor</span> today.
+            </h2>
+            <p className="mt-5 text-white/80 max-w-xl">
+              Share your details and our team will reach out within one working day to schedule a
+              personalized site visit.
+            </p>
+          </Reveal>
+        </div>
+      </div>
 
-              <div className="mt-10 space-y-5">
-                {[
-                  { icon: Phone, label: "Call us", value: "+91 98765 43210", href: "tel:+919876543210" },
-                  {
-                    icon: Mail,
-                    label: "Email",
-                    value: "sales@sunshinepromoters.in",
-                    href: "mailto:sales@sunshinepromoters.in",
-                  },
-                  { icon: MapPin, label: "Office", value: "Bengaluru, Karnataka, India" },
-                  { icon: Clock, label: "Business Hours", value: "Mon – Sat · 9:30 AM – 7:00 PM" },
-                ].map((c) => (
-                  <div key={c.label} className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-green/15 text-brand-green">
-                      <c.icon className="h-5 w-5" />
-                    </span>
-                    <div>
-                      <div className="text-xs uppercase tracking-wider text-white/70">
-                        {c.label}
-                      </div>
-                      {c.href ? (
-                        <a
-                          href={c.href}
-                          className="text-white font-medium hover:text-brand-green"
-                        >
-                          {c.value}
-                        </a>
-                      ) : (
-                        <div className="text-white font-medium">{c.value}</div>
-                      )}
+      <div className="py-16 md:py-24 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <Reveal>
+            <div className="mt-10 space-y-5">
+              {[
+                { icon: Phone, label: "Call us", value: "+91 98765 43210", href: "tel:+919876543210" },
+                {
+                  icon: Mail,
+                  label: "Email",
+                  value: "sales@sunshinepromoters.in",
+                  href: "mailto:sales@sunshinepromoters.in",
+                },
+                { icon: MapPin, label: "Office", value: "Bengaluru, Karnataka, India" },
+                { icon: Clock, label: "Business Hours", value: "Mon – Sat · 9:30 AM – 7:00 PM" },
+              ].map((c) => (
+                <div key={c.label} className="flex items-start gap-4">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-green/10 text-brand-green">
+                    <c.icon className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                      {c.label}
                     </div>
+                    {c.href ? (
+                      <a
+                        href={c.href}
+                        className="text-foreground font-medium hover:text-brand-green"
+                      >
+                        {c.value}
+                      </a>
+                    ) : (
+                      <div className="text-foreground font-medium">{c.value}</div>
+                    )}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          </div>
 
-          <div className="mt-10 rounded-2xl overflow-hidden border border-border/60 shadow-sm">
-            <iframe
-              title="Sunshine office location"
-              src="https://www.google.com/maps?q=Narsapur%20Industrial%20Area%2C%20Karnataka&output=embed"
-              width="100%"
-              height="260"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="border-0"
-            />
-          </div>
-        </Reveal>
+            <div className="mt-10 rounded-2xl overflow-hidden border border-border/60 shadow-sm">
+              <iframe
+                title="Sunshine office location"
+                src="https://www.google.com/maps?q=Narsapur%20Industrial%20Area%2C%20Karnataka&output=embed"
+                width="100%"
+                height="260"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="border-0"
+              />
+            </div>
+          </Reveal>
 
         <Reveal delay={0.1}>
           <form
@@ -239,6 +242,7 @@ export function ContactSection() {
             </div>
           </form>
         </Reveal>
+      </div>
       </div>
     </section>
   );
