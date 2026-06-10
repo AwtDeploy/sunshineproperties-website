@@ -152,11 +152,7 @@ export function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p, i) => (
-            <Reveal
-              key={p.name}
-              delay={i * 0.08}
-              className={i === 6 ? "lg:col-start-2" : undefined}
-            >
+            <Reveal key={p.name} delay={i * 0.08}>
               <article className="group rounded-2xl overflow-hidden bg-white border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <div className="relative">
                   <ProjectCarousel images={p.images} alt={p.name} />
