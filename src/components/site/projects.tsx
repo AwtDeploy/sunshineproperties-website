@@ -131,7 +131,7 @@ function ProjectCarousel({ images, alt }: { images: string[]; alt: string }) {
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 md:py-24">
+    <section id="projects" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
