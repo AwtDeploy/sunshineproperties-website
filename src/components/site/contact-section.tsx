@@ -109,6 +109,8 @@ export function ContactSection() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
 
           <div className="mt-10 rounded-2xl overflow-hidden border border-border/60 shadow-sm">
             <iframe
