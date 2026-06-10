@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { enquiryFormSchema, type EnquiryFormInput } from "@/lib/enquiry-schema";
 import { Reveal } from "./reveal";
+import bg from "@/assets/cta-bg.jpg";
 
 async function postEnquiry(values: EnquiryFormInput) {
   const res = await fetch("/api/submit-enquiry", {
@@ -59,51 +60,55 @@ export function ContactSection() {
     <section id="contact" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16">
         <Reveal>
-          <span className="text-xs tracking-[0.22em] uppercase text-brand-orange font-medium">
-            Get In Touch
-          </span>
-          <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-foreground">
-            Speak to our <span className="italic text-brand-green">investment advisor</span> today.
-          </h2>
-          <p className="mt-5 text-muted-foreground leading-relaxed max-w-md">
-            Share your details and our team will reach out within one working day to schedule a
-            personalized site visit.
-          </p>
+          <div className="relative rounded-2xl overflow-hidden p-8 md:p-10">
+            <img src={bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
+            <div className="relative">
+              <span className="text-xs tracking-[0.22em] uppercase text-brand-orange font-medium">
+                Get In Touch
+              </span>
+              <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-white">
+                Speak to our <span className="italic text-brand-green">investment advisor</span> today.
+              </h2>
+              <p className="mt-5 text-white/80 leading-relaxed max-w-md">
+                Share your details and our team will reach out within one working day to schedule a
+                personalized site visit.
+              </p>
 
-          <div className="mt-10 space-y-5">
-            {[
-              { icon: Phone, label: "Call us", value: "+91 98765 43210", href: "tel:+919876543210" },
-              {
-                icon: Mail,
-                label: "Email",
-                value: "sales@sunshinepromoters.in",
-                href: "mailto:sales@sunshinepromoters.in",
-              },
-              { icon: MapPin, label: "Office", value: "Bengaluru, Karnataka, India" },
-              { icon: Clock, label: "Business Hours", value: "Mon – Sat · 9:30 AM – 7:00 PM" },
-            ].map((c) => (
-              <div key={c.label} className="flex items-start gap-4">
-                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-green/10 text-brand-green">
-                  <c.icon className="h-5 w-5" />
-                </span>
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">
-                    {c.label}
+              <div className="mt-10 space-y-5">
+                {[
+                  { icon: Phone, label: "Call us", value: "+91 98765 43210", href: "tel:+919876543210" },
+                  {
+                    icon: Mail,
+                    label: "Email",
+                    value: "sales@sunshinepromoters.in",
+                    href: "mailto:sales@sunshinepromoters.in",
+                  },
+                  { icon: MapPin, label: "Office", value: "Bengaluru, Karnataka, India" },
+                  { icon: Clock, label: "Business Hours", value: "Mon – Sat · 9:30 AM – 7:00 PM" },
+                ].map((c) => (
+                  <div key={c.label} className="flex items-start gap-4">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-green/15 text-brand-green">
+                      <c.icon className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <div className="text-xs uppercase tracking-wider text-white/70">
+                        {c.label}
+                      </div>
+                      {c.href ? (
+                        <a
+                          href={c.href}
+                          className="text-white font-medium hover:text-brand-green"
+                        >
+                          {c.value}
+                        </a>
+                      ) : (
+                        <div className="text-white font-medium">{c.value}</div>
+                      )}
+                    </div>
                   </div>
-                  {c.href ? (
-                    <a
-                      href={c.href}
-                      className="text-foreground font-medium hover:text-brand-green"
-                    >
-                      {c.value}
-                    </a>
-                  ) : (
-                    <div className="text-foreground font-medium">{c.value}</div>
-                  )}
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
 
           <div className="mt-10 rounded-2xl overflow-hidden border border-border/60 shadow-sm">
             <iframe
