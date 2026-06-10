@@ -131,19 +131,21 @@ function ProjectCarousel({ images, alt }: { images: string[]; alt: string }) {
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 md:py-24 bg-cream">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+    <section id="projects" className="relative py-16 md:py-24 overflow-hidden">
+      <img src={p1} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
+      <div className="relative mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
               <span className="text-xs tracking-[0.22em] uppercase text-brand-orange font-medium">
                 Featured Projects
               </span>
-              <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-foreground max-w-xl">
+              <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-white max-w-xl">
                 Premium plotted developments, thoughtfully placed.
               </h2>
             </div>
-            <p className="text-muted-foreground max-w-md">
+            <p className="text-white/80 max-w-md">
               Each Sunshine project is selected for its location advantage, legal
               clarity, and long-term appreciation potential.
             </p>

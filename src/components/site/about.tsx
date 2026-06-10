@@ -3,11 +3,14 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./reveal";
 import img from "@/assets/gallery-2.jpg";
+import hero from "@/assets/hero.jpg";
 
 export function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-cream">
-      <div className="mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section id="about" className="relative py-16 md:py-24 overflow-hidden">
+      <img src={hero} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
+      <div className="relative mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal>
           <div className="relative">
             <img
@@ -29,15 +32,15 @@ export function About() {
           <span className="text-xs tracking-[0.22em] uppercase text-brand-orange font-medium">
             About Sunshine
           </span>
-          <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-foreground">
+          <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-white">
             Where vision meets <span className="italic text-brand-green">enduring value</span>.
           </h2>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
+          <p className="mt-6 text-white/80 leading-relaxed">
             Sunshine Marketing &amp; Promoters is a professionally managed real estate
             company focused on high-value plotted developments in emerging growth
             corridors of Karnataka.
           </p>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-white/80 leading-relaxed">
             Every project we deliver is chosen for legal transparency, future
             appreciation, and the long-term security of our customers.
           </p>
@@ -50,8 +53,8 @@ export function About() {
               { v: "Prime", l: "Growth Locations" },
             ].map((s) => (
               <div key={s.l} className="border-l-2 border-brand-orange/70 pl-4">
-                <div className="font-serif text-2xl text-foreground">{s.v}</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">
+                <div className="font-serif text-2xl text-white">{s.v}</div>
+                <div className="text-xs uppercase tracking-wider text-white/70 mt-1">
                   {s.l}
                 </div>
               </div>
@@ -61,7 +64,7 @@ export function About() {
           <Button
             asChild
             variant="outline"
-            className="mt-10 rounded-full border-brand-green text-brand-green hover:bg-brand-green hover:text-white"
+            className="mt-10 rounded-full border-white text-white hover:bg-white hover:text-foreground"
           >
             <Link to="/about">
               Our story <ArrowRight className="ml-2 h-4 w-4" />
